@@ -1,0 +1,1008 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  .wrapper{
+    position: fixed;
+    top: 0;
+    left: 60%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .wrapper{
+    clip-path: circle(75%);
+  }
+  .menu-btn{
+    position: absolute;
+    z-index: 2;
+    right: 60px;
+    /* left: 20px; */
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .menu-btn{
+    color: white;
+  }
+  #active:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  .wrapper ul{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: left;
+  }
+  .wrapper ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+  }
+  .wrapper ul li a:after{
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+  .wrapper ul li a:hover:after{
+    transform: scaleY(1);
+  }
+  .wrapper ul li a:hover{
+    color: red;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  .search {
+    width: 50px;
+    margin-top: -2px;
+    margin-left: 450px;
+  }
+  
+  .ni1 {
+    width: 220px;
+  
+    margin-left: 50px;
+  }
+  
+  /* main */
+  .mi1 {
+    width: 93%;
+    margin-left: 50px;
+  }
+  
+  .mh1 {
+    position: relative;
+    background-color: white;
+    color: black;
+    width: 450px;
+    padding: 10px 12px 10px;
+    font-size: 55px;
+    margin-top: -500px;
+    margin-left: 50px;
+  }
+  
+  .mh2 {
+    position: relative;
+    background-color: black;
+    color: white;
+    width: 650px;
+    padding: 25px;
+    font-size: 19px;
+    margin-top: 0;
+    margin-left: 50px;
+  }
+  
+  .para1 {
+    background-color: #6bbbae;
+    font-size: 35px;
+    width: 550px;
+    margin-left: 85px;
+    padding: 15px;
+  }
+  
+  .para2 {
+    background-color: #e5007d;
+    font-size: 35px;
+    width: 520px;
+    margin-left: 720px;
+    margin-top: -70px;
+    padding: 14px;
+  }
+  
+  .b1 {
+    width: 110px;
+    height: 32px;
+    padding: 3px;
+    background-color: #d3eae6;
+    margin-left: 60px;
+    margin-top: 5px;
+    position: absolute;
+  }
+  
+  .b2 {
+    width: 130px;
+    height: 32px;
+    background-color: black;
+    color: white;
+    margin-left: 190px;
+    margin-top: 5px;
+    position: absolute;
+    padding: 5px;
+  }
+  
+  .video1 {
+    width: 1200px;
+    margin-left: 80px;
+  }
+  
+  .button0 {
+    width: 300px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ff0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -475px;
+    margin-left: 135px;
+  }
+  
+  .button1 {
+    width: 300px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: lightgreen;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -475px;
+    margin-left: 527px;
+  }
+  
+  .button2 {
+    width: 300px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ff0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -475px;
+    margin-left: 917px;
+  }
+  
+  .button3 {
+    width: 300px;
+    height: 53px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: lightgreen;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -70px;
+    margin-left: 135px;
+  }
+  
+  .button4 {
+    width: 300px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ff0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -71px;
+    margin-left: 526px;
+  }
+  
+  .button5 {
+    width: 300px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: lightgreen;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -70px;
+    margin-left: 919px;
+  }
+  
+  .button0:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #ff0072;
+    z-index: -1;
+  }
+  
+  .button0:hover,
+  .button0:focus {
+    color: white;
+  }
+  
+  .button2:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #ff0072;
+    z-index: -1;
+  }
+  
+  .button2:hover,
+  .button2:focus {
+    color: white;
+  }
+  
+  .button4:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #ff0072;
+    z-index: -1;
+  }
+  
+  .button4:hover,
+  .button4:focus {
+    color: white;
+  }
+  
+  .button1:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: lightgreen;
+    z-index: -1;
+  }
+  
+  .button1:hover,
+  .button1:focus {
+    color: black;
+  }
+  
+  .button3:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: lightgreen;
+    z-index: -1;
+  }
+  
+  .button3:hover,
+  .button3:focus {
+    color: black;
+  }
+  
+  .button5:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: lightgreen;
+    z-index: -1;
+  }
+  
+  .button5:hover,
+  .button5:focus {
+    color: black;
+  }
+  
+  button:hover:before,
+  button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+  
+  
+  .news1 {
+    margin-left: 110px;
+  }
+  
+  .news2 {
+    font-size: 18px;
+    margin-left: 110px;
+  }
+  
+  
+  .bbuttonn {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #6bbbae;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-left: 1060px;
+  }
+  
+  .bbuttonn:hover {
+    background: #6bb;
+  }
+  
+  .bbuttonn>svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+  .bbuttonn:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .bbuttonn:active {
+    transform: scale(0.95);
+  }
+  
+  .iphoneview {
+    display: none;
+  }
+  
+  .Tabletview {
+    display: none;
+  }
+  
+  /* .iphoneview */
+  
+  
+  /* <!-- TabletView */
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .Tabipadimg1 {
+    width: 300px;
+    padding: 20px;
+  }
+  
+  .Taboverlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .Taboverlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: -190px;
+    margin-left: 60px;
+  }
+  
+  .Taboverlay a {
+    padding: 8px;
+    text-decoration: none;
+    text-align: left;
+    font-size: 50px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .Taboverlay a:hover,
+  .Taboverlay a:focus {
+    color: #f1f1f1;
+    background-color: black;
+    border-radius: 10px;
+  }
+  
+  .Taboverlay .closebtn {
+    position: absolute;
+    top: -14px;
+    right: 63px;
+    font-size: 100px;
+  }
+  
+  /* @media screen and (max-height: 1024px) {
+    .Taboverlay a {font-size: 20px}
+    .Taboverlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  } */
+  
+  .Tabbutton0 {
+    width: 250px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ff0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -370px;
+    margin-left: 75px;
+  }
+  
+  .Tabbutton1 {
+    width: 250px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: lightgreen;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -370px;
+    margin-left: 375px;
+  }
+  
+  .TAbbutton2 {
+    width: 250px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ff0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -370px;
+    margin-left: 675px;
+  }
+  
+  .Tabbutton3 {
+    width: 250px;
+    height: 53px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: lightgreen;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -70px;
+    margin-left: 75px;
+  }
+  
+  .Tabbutton4 {
+    width: 250px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: #ff0072;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -65px;
+    margin-left: 375px;
+  }
+  
+  .Tabbutton5 {
+    width: 250px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.7em 2em;
+    border: none;
+    border-radius: 2px;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: lightgreen;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+    margin-top: -65px;
+    margin-left: 675px;
+  }
+  
+  .Tabbutton0:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #ff0072;
+    z-index: -1;
+  }
+  
+  .Tabbutton0:hover,
+  .Tabbutton0:focus {
+    color: white;
+  }
+  
+  .TAbbutton2:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #ff0072;
+    z-index: -1;
+  }
+  
+  .TAbbutton2:hover,
+  .TAbbutton2:focus {
+    color: white;
+  }
+  
+  .Tabbutton4:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #ff0072;
+    z-index: -1;
+  }
+  
+  .Tabbutton4:hover,
+  .Tabbutton4:focus {
+    color: white;
+  }
+  
+  .Tabbutton1:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: lightgreen;
+    z-index: -1;
+  }
+  
+  .Tabbutton1:hover,
+  .Tabbutton1:focus {
+    color: black;
+  }
+  
+  .Tabbutton3:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: lightgreen;
+    z-index: -1;
+  }
+  
+  .Tabbutton3:hover,
+  .Tabbutton3:focus {
+    color: black;
+  }
+  
+  .Tabbutton5:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: lightgreen;
+    z-index: -1;
+  }
+  
+  .Tabbutton5:hover,
+  .Tabbutton5:focus {
+    color: black;
+  }
+  
+  button:hover:before,
+  button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+  
+  
+  
+  .Tabbbuttonn {
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Helvetica, "sans-serif";
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #6bbbae;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 760px;
+  }
+  
+  .Tabbbuttonn:hover {
+    background: #6bb;
+  }
+  
+  .Tabbbuttonn>svg {
+    width: 34px;
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+  .Tabbbuttonn:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .Tabbbuttonn:active {
+    transform: scale(0.95);
+  }
+  
+  
+  @media screen and (max-width: 1024px) {
+    .Tabletview {
+      display: block  ;
+    }
+    .desktopview{
+      display: none;
+    }
+    .iphoneview{
+      display: none;
+    }
+    
+  }
+  
+  @media screen and (max-width: 430px) {
+  
+    .iphoneview {
+      display: block;
+    }
+    .desktopview {
+      display: none;
+    }
+    .Tabletview {
+      display: none;
+    }
+  
+    .iphoneoverlay a {
+      font-size: 40px;
+      text-align: left;
+      margin-left: -450px;
+      font-size: 30px;
+    }
+  
+    .iphoneoverlay .iclosebtn {
+      font-size: 90px;
+      top: 15px;
+      right: 35px;
+    }
+  
+    .span1 {
+      font-size: 30px;
+      margin-left: 280px;
+      margin-top: -10px;
+    }
+  
+    .ni1 {
+      width: 100px;
+      margin-left: 10px;
+    }
+  
+    .search {
+      margin-left: 170px;
+      margin-top: -4px;
+      width: 40px;
+      position: absolute;
+    }
+  
+    .mi1 {
+      margin-left: 0px;
+      width: 105%;
+    }
+  
+    .mh1 {
+      background-color: black;
+      color: white;
+      font-size: 45px;
+      width: 350px;
+      margin-top: 30px;
+      margin-left: 0;
+    }
+  
+    .mh2 {
+      margin-left: 0;
+      background-color: white;
+      color: black;
+      font-size: 22px;
+      width: 400px;
+      font-family: serif;
+      margin-top: -10px;
+    }
+  
+    .para1 {
+      text-align: center;
+      width: 380px;
+      height: 85px;
+      margin: 20px;
+      font-size: 30px;
+      margin-top: -270px;
+    }
+  
+    .para2 {
+      text-align: center;
+      width: 380px;
+      height: 85px;
+      margin: 0;
+      margin-left: 20px;
+      margin-top: 00px;
+    }
+  
+    .b1 {
+      width: 130px;
+      height: 40px;
+      margin: 0;
+      margin-top: 51px;
+      margin-left: -240px;
+  
+    }
+  
+    .b2 {
+      width: 150px;
+      height: 40px;
+      margin: 0;
+      margin-top: 51px;
+      margin-left: -90px;
+    }
+  
+    .video1 {
+      width: 417px;
+      margin: 16px;
+    }
+  
+    .si1 {
+      margin-left: -60px;
+    }
+  
+    .si2 {
+      margin-top: 430px;
+      margin-left: -390px;
+    }
+  
+    .si3 {
+      margin-top: 863px;
+      margin-left: -392px;
+    }
+  
+    .si4 {
+      margin-top: 32px;
+      margin-left: -60px;
+    }
+  
+    .si5 {
+      margin-top: 465px;
+      margin-left: -392px;
+    }
+  
+    .si6 {
+      margin-top: 899px;
+      margin-left: -392px;
+    }
+  
+    .button0 {
+      margin-top: -2230px;
+      margin-left: 75px;
+    }
+  
+    .button1 {
+      margin-top: -1805px;
+      margin-left: 75px;
+    }
+  
+    .button2 {
+      margin-top: -1370px;
+      margin-left: 75px;
+    }
+  
+    .button3 {
+      margin-top: -940px;
+      margin-left: 75px;
+    }
+  
+    .button4 {
+      margin-top: -500px;
+      margin-left: 75px;
+    }
+  
+    .button5 {
+      margin-left: 75px;
+    }
+  }
+  
